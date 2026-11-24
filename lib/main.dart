@@ -32,7 +32,7 @@ class _BottomNavLabState extends State<BottomNavLab> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Lab 05: Main Branch Version'),
+          title: const Text('Lab 05: Exercise A'),
           backgroundColor: Colors.blue,
         ),
         body: screens[currentIndex],
