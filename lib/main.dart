@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'screen1.dart';
 import 'screen2.dart';
 import 'screen3.dart';
@@ -15,10 +16,8 @@ class BottomNavLab extends StatefulWidget {
   State<BottomNavLab> createState() => _BottomNavLabState();
 }
 
-
 class _BottomNavLabState extends State<BottomNavLab> {
   int currentIndex = 0;
-
 
   final List<Widget> screens = const [
     Screen1(),
@@ -32,6 +31,10 @@ class _BottomNavLabState extends State<BottomNavLab> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Lab 05: Exercise A'),
+          backgroundColor: Colors.blue,
+        ),
         body: screens[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: currentIndex,
@@ -43,7 +46,10 @@ class _BottomNavLabState extends State<BottomNavLab> {
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.alarm), label: 'Alarm'),
-            BottomNavigationBarItem(icon: Icon(Icons.business), label: 'Business'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.business),
+              label: 'Business',
+            ),
             BottomNavigationBarItem(icon: Icon(Icons.school), label: 'School'),
           ],
         ),
